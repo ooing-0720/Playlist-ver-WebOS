@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="list_style.css">
+
+    </head>
+    </head>
+    <body>
+        <div class="main_div">
+            <div class="left_side">
+                <div class="thum_img" id ="thum_img"></div>
+
+                <div class="buttons">
+                    <button class="previous" onclick="previousVideo();"><i class="fas fa-step-backward"></i></button>
+                    <button class="start" id="start" onclick="playToggle();"><i class="fas fa-play"></i></span></button>
+                    <button class="next" onclick="nextVideo();"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
+
+            <div class="right_side">
+                <div class="main" id="main">
+                    
+                    <div class="add_btn">
+                        <button class="add"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="playlist" id="playlist"></div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script src="list_play_script.js"></script>
+
+        <script language="javascript">
+            temp = location.href.split("?");
+            data = temp[1];
+            document.getElementById("main").innerHTML = `
+            <p class="title_1" id="title">${data}</p><p class="title_2">의 playlist</p>`;
+        </script>
+        <!--
+        <script>
+            var isPlayed = false;
+        
+        
+        $(function(){
+            $("#start").click(function(){
+                if(isPlayed == false){
+                    $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+                    isPlayed = true;
+                    var element = document.getElementById("start");
+                    element.innerHTML = '<i class="fas fa-pause"></i>';
+                }
+        
+                else{
+                    $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+                    isPlayed = false;
+                    var element = document.getElementById("start");
+                    element.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });   
+        
+            // 연속 재생 가능!! 썸네일 바뀌게 어케하지? 
+            $("#previous").click(function(){
+                $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'previousVideo' + '","args":""}', '*');
+                isPlayed = true;
+                var element = document.getElementById("start");
+                element.innerHTML = '<i class="fas fa-pause"></i>';
+            });
+        
+            $("#next").click(function(){
+                $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'nextVideo' + '","args":""}', '*');
+                isPlayed = true;
+                var element = document.getElementById("start");
+                element.innerHTML = '<i class="fas fa-pause"></i>';
+            });
+        })
+        
+        
+        // 목록의 노래 누를 경우 -> 위 처럼 바꾸기!! (가능?)
+        function change_thumb(obj){
+            var image_src = document.getElementById(obj).src;
+            document.getElementById("thumbnail").src = image_src;
+            
+            videoID = image_src.substr(23, 11);
+            document.getElementById("player").src = "https://www.youtube.com/embed/" + videoID + document.getElementById("player").src.substr(41);
+        
+            isPlayed = true;
+            var element = document.getElementById("start");
+            element.innerHTML = '<i class="fas fa-pause"></i>';
+        
+        }
+        
+        $("#music").on("click", function(){ $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*'); });
+        </script>
+    -->
+    </body>
+</html>
