@@ -18,7 +18,6 @@ $(function(){
         }
     });   
 
-    // 연속 재생 가능!! 썸네일 바뀌게 어케하지? 
     $("#previous").click(function(){
         $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'previousVideo' + '","args":""}', '*');
         isPlayed = true;
@@ -34,8 +33,6 @@ $(function(){
     });
 })
 
-
-// 목록의 노래 누를 경우 -> 위 처럼 바꾸기!! (가능?)
 function change_thumb(obj){
     var image_src = document.getElementById(obj).src;
     document.getElementById("thumbnail").src = image_src;
