@@ -161,71 +161,106 @@ function putDevice() {
                 "_kind": kindID,
                 "user": "sojeong",
                 "id": "00",
-                "vid": "822jjVMdj58",
-                "title": "Music Video メビウス／めいちゃん"
+                "vid": "htVwyYMk_Xg",
+                "title": "전쟁터 (Hey kid, Close your eyes) (with Lee Sun Hee)"
             },
             {
                 "_kind": kindID,
                 "user": "sojeong",
                 "id": "01",
-                "vid": "IyNqRHh7Qfo",
-                "title": "Music Video 季節と私の話。／めいちゃん"
+                "vid": "uaejCvCMu5I",
+                "title": "낙하 (NAKKA) (with IU)"
             },
             {
                 "_kind": kindID,
                 "user": "sojeong",
                 "id": "02",
-                "vid": "SMEyLYGGLKc",
-                "title": "Music Video 小悪魔だってかまわない！／めいちゃん"
+                "vid": "-PwcLzYMQZY",
+                "title": "BENCH (with Zion.T)"
             },
             {
                 "_kind": kindID,
                 "user": "sojeong",
                 "id": "03",
-                "vid": "Rd2__KGSZs4",
-                "title": "Music Video 水滴／めいちゃん"
+                "vid": "BakKmcAzHBY",
+                "title": "째깍 째깍 째깍 (Tictoc Tictoc Tictoc) (with Beenzino)"
             },
             {
                 "_kind": kindID,
                 "user": "heeran",
                 "id": "04",
-                "vid": "beu-Kta_h8E",
-                "title": "フォニイ Cover / めいちゃん"
+                "vid": "cLQox8e9688",
+                "title": "Two Of Us (Remastered 2009)"
             },
             {
                 "_kind": kindID,
                 "user": "heeran",
                 "id": "05",
-                "vid": "6PvlSbd4HDk",
-                "title": "踊 歌ってみた 【あらき×nqrse×めいちゃん"
+                "vid": "LpdJE7HG8Ls",
+                "title": "Dig A Pony (Remastered 2009)"
             },
             {
                 "_kind": kindID,
                 "user": "heeran",
                 "id": "06",
-                "vid": "4DMsoND2Ays",
-                "title": "ヴァンパイア 歌ってみた 【あらき×nqrse×めいちゃん"
+                "vid": "90M60PzmxEE",
+                "title": "Across The Universe (Remastered 2009)"
             },
             {
                 "_kind": kindID,
                 "user": "heeran",
                 "id": "07",
-                "vid": "wwOFRX-7EWY",
-                "title": "ダーリンダンス 歌ってみた 【あらき×nqrse×めいちゃん"
+                "vid": "seqaTuXkqFI",
+                "title": "I Me Mine (Remastered 2009)"
             },
             {
                 "_kind": kindID,
                 "user": "heeran",
                 "id": "08",
-                "vid": "OOehYqsN6Fk",
-                "title": "【MV】 えらくてえらい あらき×nqrse×めいちゃん"
+                "vid": "QDYfEBY9NM4",
+                "title": "Let It Be (Remastered 2009)"
             },
             {
                 "_kind": kindID,
                 "user": "heeran",
                 "id": "09",
-                "vid": "M484CkcxXuY",
-                "title": "春を告げる 歌ってみた【あらき×nqrse×めいちゃん"
+                "vid": "fUUOX6kAIxI",
+                "title": "Dig It (Remastered 2009)"
+            },
+            {
+                "_kind": kindID,
+                "user": "bojeong",
+                "id": "10",
+                "vid": "ZThVobEtp_o",
+                "title": "Celebrity (Celebrity)"
+            },
+            {
+                "_kind": kindID,
+                "user": "bojeong",
+                "id": "11",
+                "vid": "04tYkKUPPv4",
+                "title": "LILAC (라일락)"
+            },
+            {
+                "_kind": kindID,
+                "user": "bojeong",
+                "id": "12",
+                "vid": "TqIAndOnd74",
+                "title": "My sea (아이와 나의 바다)"
+            },
+            {
+                "_kind": kindID,
+                "user": "bojeong",
+                "id": "13",
+                "vid": "7n9D8ZeOQv0",
+                "title": "Ah puh (어푸 (Ah puh))"
+            },
+            {
+                "_kind": kindID,
+                "user": "bojeong",
+                "id": "13",
+                "vid": "hiUPJaHjuUk",
+                "title": "Troll (Feat. DEAN) (돌림노래 (Feat. DEAN))"
             }
         ]
     };
@@ -234,26 +269,3 @@ function putDevice() {
     console.log('putDevice', params);
     
 }
-
-/*
-function toastCallback(msg) {
-    console.log("before-parse-response");
-    var response = JSON.parse(msg);
-    console.log(response);
-}
-
-function createToast() {
-    var url = 'luna://com.webos.notification/createToast';
-
-    var user_name = document.getElementById("title").value;
-    bridge.onservicecallback = toastCallback;
-
-    var params = {
-        "message": user_name
-    };
-
-    console.log("before-bridge.call");
-    bridge.call(url, JSON.stringify(params));
-    console.log("after-bridge.call");
-}
-*/
