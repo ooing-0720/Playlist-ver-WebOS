@@ -1,4 +1,4 @@
-const kindID = "com.sample.playlist.db:1";
+const kindID = "com.playlist.db:1";
 const bridge = new WebOSServiceBridge();
 
 console.log("js"); 
@@ -14,7 +14,7 @@ function putKind() {
     bridge.onservicecallback = (msg) => {console.log(msg)};
     let params = {
         "id":kindID,
-        "owner":"com.sample.playlist.db",
+        "owner":"com.playlist.db",
         "indexes": [
             {
                 "name": "user",
@@ -59,7 +59,7 @@ function putPermissions() {
                },
                "object":kindID,
                "type":"db.kind",
-               "caller":"com.sample.playlist.db"
+               "caller":"com.playlist.db"
             }
          ]
     };
@@ -269,3 +269,26 @@ function putDevice() {
     console.log('putDevice', params);
     
 }
+
+/*
+function toastCallback(msg) {
+    console.log("before-parse-response");
+    var response = JSON.parse(msg);
+    console.log(response);
+}
+
+function createToast() {
+    var url = 'luna://com.webos.notification/createToast';
+
+    var user_name = document.getElementById("title").value;
+    bridge.onservicecallback = toastCallback;
+
+    var params = {
+        "message": user_name
+    };
+
+    console.log("before-bridge.call");
+    bridge.call(url, JSON.stringify(params));
+    console.log("after-bridge.call");
+}
+*/
